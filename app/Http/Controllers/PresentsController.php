@@ -97,7 +97,7 @@ class PresentsController extends Controller
         $data['tanggal']    = date('Y-m-d');
         $data['user_id']    = $request->user_id;
 
-        if (date('l') == 'Saturday' || date('l') == 'Sunday') {
+        if (date('l') == 'Friday' || date('l') == 'Friday') {
             return redirect()->back()->with('error','Hari Libur Tidak bisa Check In');
         }
 

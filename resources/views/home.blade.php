@@ -5,10 +5,10 @@
 @section('content')
     @if ($libur)
         <div class="text-center">
-            <p>Absen Libur (Hari Libur Nasional {{ $holiday }})</p>
+
         </div>
     @else
-        @if (date('l') == "Saturday" || date('l') == "Sunday")
+        @if (date('l') == "Friday" || date('l') == "Friday")
             <div class="text-center">
                 <p>Absen Libur</p>
             </div>
