@@ -23,8 +23,10 @@ class PresentsController extends Controller
         $telat = Present::whereTanggal(date('Y-m-d'))->whereKeterangan('telat')->count();
         $cuti = Present::whereTanggal(date('Y-m-d'))->whereKeterangan('cuti')->count();
         $alpha = Present::whereTanggal(date('Y-m-d'))->whereKeterangan('alpha')->count();
+        $sakit = Present::whereTanggal(date('Y-m-d'))->whereKeterangan('sakit')->count();
         $rank = $presents->firstItem();
-        return view('presents.index', compact('presents','rank','masuk','telat','cuti','alpha'));
+
+        return view('presents.index', compact('presents','rank','masuk','telat','cuti','alpha', 'sakit'));
     }
 
     public function search(Request $request)

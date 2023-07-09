@@ -6,7 +6,7 @@ Kehadiran - {{ config('app.name') }}
 
 @section('header')
     <div class="row">
-        <div class="col-xl-3 col-lg-6">
+        <div class="col-xl-2 col-lg-2">
             <div class="card card-stats mb-4 mb-xl-0">
                 <div class="card-body">
                     <div class="row">
@@ -23,7 +23,7 @@ Kehadiran - {{ config('app.name') }}
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-lg-6">
+        <div class="col-xl-2 col-lg-2">
             <div class="card card-stats mb-4 mb-xl-0">
                 <div class="card-body">
                     <div class="row">
@@ -40,7 +40,7 @@ Kehadiran - {{ config('app.name') }}
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-lg-6">
+        <div class="col-xl-2 col-lg-2">
             <div class="card card-stats mb-4 mb-xl-0">
                 <div class="card-body">
                     <div class="row">
@@ -57,7 +57,7 @@ Kehadiran - {{ config('app.name') }}
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-lg-6">
+        <div class="col-xl-2 col-lg-2">
             <div class="card card-stats mb-4 mb-xl-0">
                 <div class="card-body">
                     <div class="row">
@@ -68,6 +68,23 @@ Kehadiran - {{ config('app.name') }}
                         <div class="col-auto">
                             <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
                                 <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-2">
+            <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="card-title text-uppercase text-muted mb-0">Sakit</h5>
+                            <span class="h2 font-weight-bold mb-0">{{ $sakit }}</span>
+                        </div>
+                        <div class="col-auto">
+                            <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">
+                            <i class="fa fa-medkit"></i>
                             </div>
                         </div>
                     </div>
@@ -139,7 +156,7 @@ Kehadiran - {{ config('app.name') }}
                                             <td>{{ date('H:i:s', strtotime($present->jam_masuk)) }}</td>
                                         @else
                                             <td>-</td>
-                                        @endif  
+                                        @endif
                                         @if($present->jam_keluar)
                                             <td>{{ date('H:i:s', strtotime($present->jam_keluar)) }}</td>
                                             <td>
