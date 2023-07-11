@@ -194,7 +194,8 @@ class PresentsController extends Controller
         $telat = Present::whereUserId(auth()->user()->id)->whereMonth('tanggal',date('m'))->whereYear('tanggal',date('Y'))->whereKeterangan('telat')->count();
         $cuti = Present::whereUserId(auth()->user()->id)->whereMonth('tanggal',date('m'))->whereYear('tanggal',date('Y'))->whereKeterangan('cuti')->count();
         $alpha = Present::whereUserId(auth()->user()->id)->whereMonth('tanggal',date('m'))->whereYear('tanggal',date('Y'))->whereKeterangan('alpha')->count();
-        return view('presents.show', compact('presents','masuk','telat','cuti','alpha'));
+        $sakit = Present::whereUserId(auth()->user()->id)->whereMonth('tanggal',date('m'))->whereYear('tanggal',date('Y'))->whereKeterangan('sakit')->count();
+        return view('presents.show', compact('presents','masuk','telat','cuti','alpha', 'sakit'));
     }
 
     /**
